@@ -165,7 +165,9 @@ Return ONLY a JSON object with these fields:
     except Exception as e:
         print(f"🔥 Critical Error: {str(e)}")
         return jsonify({"success": False, "error": str(e)}), 500
-
+@app.route('/', methods=['GET'])
+def health_check():
+    return "Server is awake!", 200
 if __name__ == '__main__':
     print("🚀 Server running on http://127.0.0.1:5000")
     app.run(host='0.0.0.0', port=5000, debug=True)
