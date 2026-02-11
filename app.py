@@ -46,7 +46,7 @@ STRATEGY & RULES (Follow Strictly):
    - IF User selects "Economy" AND "Thick/Coarse Hair":
      - This is a difficult combination. DO NOT recommend expensive Mid-range models ($60+).
      - RECOMMEND: "Philips Norelco Shaver 2300" (Best cheap rotary) OR "Remington F5-5800" (Best cheap foil for power).
-     - MANDATORY WARNING: You MUST state in 'reasoning': "N
+     - MANDATORY WARNING: You MUST state in 'reasoning': 'Note: Budget models may struggle with very thick hair; multiple passes might be required.
 4. **EDGE CASES & WARNINGS (Handle with care):**
    - **Scenario A (Sensitive + Thick + Economy):** Recommendation is RISKY. Recommend "Panasonic Arc3" or "Braun Series 3" but append warning: "Warning: For thick hair on sensitive skin, budget models may cause pulling. Use shaving cream/gel is highly recommended."
    - **Scenario B (Ingrown Hairs + "Closest Shave"):** Prioritize curing the ingrowns over close shaving. Recommend "Philips OneBlade" or "Braun Series 5". State: "Designed to cut at skin level, not below, to prevent ingrowns."
