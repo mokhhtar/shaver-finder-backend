@@ -43,6 +43,7 @@ class RecommendationLog(db.Model):
     ai_query = db.Column(db.String(255))
     recommended_product = db.Column(db.String(255))
     amazon_url = db.Column(db.String(500))
+    ai_reasoning = db.Column(db.Text)  # <--- هذا هو العمود الجديد
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
 # إنشاء ملف قاعدة البيانات والجداول إذا لم تكن موجودة
@@ -181,13 +182,13 @@ Return ONLY a JSON object with these fields:
                     budget=budget,
                     ai_query=search_query,
                     recommended_product=product_title,
-                    amazon_url=clean_tracking_url
+                    amazon_url=clean_tracking_url,
+                    ai_reasoning=reasoning  # <--- إضافة النص هنا
                 )
                 db.session.add(new_log)
                 db.session.commit()
                 print("✅ Data successfully saved to DB.")
             except Exception as db_error:
-                # لا نوقف التنفيذ إذا فشل الحفظ في القاعدة، بل نطبعه فقط لكي نضمن وصول النتيجة للمستخدم
                 print(f"⚠️ Database Error: {db_error}")
 
             return jsonify({
